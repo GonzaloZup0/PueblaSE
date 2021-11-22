@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*Boton de login*/
+.global-header .nav-links .secondary a.sign-in-btn, .global-header .nav-links .secondary .nav-item a.shopping-cart {
+        background-color: #53575A !important;
+}
+/*Boton de registro (Aqui no es necesario)*/
+.global-header .nav-links .secondary a.register-btn {
+        background: #10163D !important;
+        color: white;
+}
+/*Enlaces*/
+a:not(.btn), a:visited:not(.btn) {
+        color: none !important;
+}
+/*Titulo en contenedor de curso*/
+.courses-container .courses .course .course-info .course-title {
+        color: #646565!important;
+}
+/*?*/
+.login-button {
+        background: #54A3DA!important;
+        box-shadow: none;
+}
+/*Banner en cada elemento de curso*/
+.courses-container .courses .course .course-image .cover-image .learn-more {
+    border-color: #09ff00 !important;
+    background: #0c0c0c !important;
+}
+/*.content-wrapper .course-tabs .nav-item.active .nav-link, .content-wrapper .course-tabs .nav-link {
+    color: #54A3DA !important;
+}
+.wrapper-course-material .course-tabs .tab a, .wrapper-course-material .course-tabs .tab a:visited {
+    color: #54A3DA !important;
+    }*/
+	
+/*Borde de color en contenedor de curso*/
+.courses-container .courses .course {
+    border-bottom: 3px solid #0026ff!important;
+}
+/*Footer*/
+.colophon{
+	width:100%!important;
+}
+.col{
+	width:50%;
+}
+.col-8{
+	width:60%;
+}
+.col-4{
+	width:40%;
+}
+
+.row{
+    display:flex;
+}
+.icons{
+    display:flex;
+    align-items:flex-end;
+}
+.icons>.icon-pair{
+    margin-left:60%;
+
+}
+.icons>.icon-pair>*{
+    margin: 0 10px;
+    
+}
+body,h1,h2,h3,h4,h5,h6,p,div,button,a{
+    font-family: "Noto Sans","Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+}
+
+
+
+/*Estilos del header- cambiar si es posible*/
+.logo{
+height:60px!important;
+width: auto;
+}
+/*Para no volver a compilar pongo los estilos aquí*/
+.icon-footer:hover {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: 1px solid rgb(82, 83, 82);
+}
+.global-header .nav-links .main {
+    float: left;
+    margin: 40px 0 0 20px!important;
+}
+.facebook-icon{
+    padding:10px 10px;
+}
+.twitter-icon{
+    padding:5px;
+}
+
+.icon-footer {
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    border: 1px solid gray;
+    font-size: 1.5em;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.icon-footer:hover {
+    color: white;
+    background-color: gray!important;
+    border: 1px solid gray!important;
+}
+a.icon-footer:hover{
+    text-decoration:none;
+    color:#e1e4ff;
+}
+a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus {
+    text-decoration:none;
+}
+.copyright{
+    font-size:18px!important;	
+}
+.nav-legal>ul>li>a:not(.btn) {
+    font-size: 14px;
+    color:#A7A8A9!important
+}
+a.media-link:hover, a.media-link:focus, a.media-lin:active {
+    border-bottom: none!important;
+}
+.global-header {
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #000000!important;
+//    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 10%);
+    background: rgb(255, 255, 255);
+    line-height: 1.5;
+}
+
+div.wrapper.wrapper-footer {
+    background-color: rgb(0, 0, 0);
+    }
+
+    .wrapper-footer footer#footer-openedx .footer-about-openedx:last-child {
+        margin-right: 0;
+    }
+    .wrapper-footer footer#footer-openedx .footer-about-openedx {
+        float: right!important;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        text-align: right;
+    }

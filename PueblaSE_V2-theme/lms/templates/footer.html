@@ -1,0 +1,473 @@
+<%page expression_filter="h"/>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from branding.api import get_footer
+  from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+
+<footer>
+  <head>
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  </head>
+  <style>
+
+  body, h1, h2, .home>header .title>.heading-group p, section.outside-app h1, h3, h4, h5, h6, p, div, button, a {
+    font-family: 'Montserrat', sans-serif!important;
+    font-weight: bold!important;
+  }
+
+ :root{
+      --ColorTitulos: #A7A8A9;
+      --ColorTexto: black;
+      --ColorLegal:#000000;
+      --ColorGeneral:#A7A8A9;
+    }
+
+/*----Inicio estilos Header----------*/ 
+  /*Borde del botón*/
+  /* .sign-in-btn{
+    border-radius: 28px !important;
+  } */
+  /*Color del botón del login*/
+  .global-header .nav-links .secondary a.sign-in-btn, .global-header .nav-links .secondary .nav-item a.shopping-cart {
+    background-color: #a8123e !important;
+  }
+  /*Barra separadora del header*/
+  .global-header {
+    border-bottom: 4px solid #4D5154 !important;
+  }
+ 
+@media (min-width: 992px){
+  .global-header .nav-links .secondary {
+    float: right;
+    margin: 36px 22px 0 0;
+  }
+}
+/*----Fin estilos Header----------*/ 
+
+/*---Inicio Estilos cuadro de busqueda*/
+
+/* Código agregado por: Gonzalo Zupo*/
+.text-center{
+  font-size: 25px;  /*original: font-size: 28px;*/
+  font-weight: bold !important;
+}
+/* Fin del codigo agregado*/
+
+home>header .title .course-search .search-button {
+  border: 13px solid chocolate;
+  background: var(--ColorGeneral)!important;
+  
+}
+
+/*Estilos genericos*/
+.home>header .title {
+    background: rgba(255,255,255,0.65) !important;
+    border-radius: 30px !important;
+    display: block;
+}
+
+@media screen and (min-width: 1440px){
+.home>header .title {
+    float: left;
+    width: 36.88080%!important;
+}
+}
+
+@media screen and (min-width: 1325px){
+.home>header .title {
+    float: left;
+    width: 38.88080%!important;
+}
+}
+
+
+@media screen and (min-width: 1024px){
+.home>header .title {
+    float: left;
+    width: 45.88080%;
+    top: -25px !important; /* Aqui se desplaza, hacia arriba o abajo, el recuadro blanco de buscqueda*/
+}
+.home>header .title:last-child {
+    margin-left: 11px!important;
+    
+}
+}
+
+@media screen and (max-width: 375px){
+  .home>header .title {
+      width: 113%;
+      box-sizing: border-box;
+      margin-left: -4%;
+  }
+}
+@media screen and (max-width: 320px){
+  .home>header .title {
+      width: 100%;
+      box-sizing: border-box;
+      margin-left: 0%;
+  }
+}
+/*---Fin Estilos cuadro de busqueda*/
+
+/*------Inicio estilos [Lista de cursos]---*/
+.courses-container .courses .course {
+    border-bottom: 3px solid  #4D5154!important;
+}
+ /*Botón adentro del curso "Aprende más"*/
+ .courses-container .courses .course .course-image .cover-image .learn-more {
+    border-color: #09ff00 !important;
+    background: var(--ColorGeneral)!important;
+}
+/*------Fin estilos [Lista de cursos]---*/
+
+/*----Inicio Bug en boton[Instructor]----------*/
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse {
+    margin-left: -4px;
+    display: contents!important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
+    left: 0%;
+    position: absolute;
+    z-index: 0;
+    height: 31px;
+    width: 73%;
+    margin: 0;
+    padding: 2px 0 0;
+    cursor: pointer;
+}
+/*----Fin Bug en boton[Instructor]----------*/
+
+/*Inicio Arreglo en apartado Progreso e instructor */
+ul, ol {
+    padding: 0 0 0 0px;
+    margin: 0em 0;
+}
+/*Fin Arreglo en apartado Progreso e instructor */
+
+
+/*-Inicio Bug en footer Discusión--*/
+.list-divided .item, ul .item, .list-bulleted .item, ol .item, .list-ordered .item, .list-inline .item, .list-grouped .item, .list .item, .list li, ol li, ul li {
+    /* display:unset; */
+    margin-bottom: 0.3125rem;
+}
+/*-Fin Bug en footer Discusión--*/
+
+/*--- Inicio Footer de vista de registro---*/
+/*Especificamente "Olvide contraseña"*/
+.view-register .wrapper-footer footer, .view-login .wrapper-footer footer, .view-passwordreset .wrapper-footer footer {
+    width: initial !important;
+}
+/*--- Fin Footer de vista de registro---*/
+
+/*----Inicio estilos footer----------*/  
+    /*Tamano de footer*/
+    footer{
+      display: block!important;
+      margin: 8px!important;
+    }
+    /*Propiedades de las "a" en el footer*/
+    footer A {
+      text-decoration: none;
+      color: var(--ColorTexto);
+    }
+    footer ul, .list-bulleted {
+      margin-left: 0%;
+    }
+
+    /*Contenedor que tiene
+    Contaco, somos y los logos
+    */
+    .contenedor{
+      display: flex;
+      justify-content: space-between;
+    }
+    /*Propiedades para contacto*/
+    div.contacto ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      color: var(--ColorTexto) !important; 
+    }
+    /*Propiedades para contacto*/
+    div.contacto ul li a:not(.btn){
+      display: inline-block;
+      text-decoration: none;
+      color: var(--ColorLegal)!important;
+      font-weight: 600;
+    }
+    /*Segmento donde esta el logo de plenum y edx*/
+    .Powered{
+      display: flex;
+      gap: 20px;
+    }
+    /*Tamaño del botón1
+    (El de plenum)
+    */
+    .btn-img1 {
+      width: 110px;
+      height: 50px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    /*Tamaño de la imagen del btn1*/
+    .btn-img1 img {
+        height: 100%;
+    }
+
+    /*Tamaño del botón2
+    (El de OpenEdx)
+    */
+    .btn-img2 {
+        width: 162px;
+        height: 50px;
+        display: inline-block;
+        text-align: center;
+    }
+    /*Tamaño de la imagen del btn2*/
+    .btn-img2 img {
+        height: 100%;
+    }
+
+    /*.enterprise-data{
+      width: 50%;
+      display: flex;
+      list-style: none;
+    } */
+
+    /*Logo de la empresa*/
+    .Logo-empresa{
+        width: 55%;
+        padding: 0px 0px 4px 6px;
+        margin-top: 1%;
+    }
+    .Logo-empresa2{
+        width: 25%;
+        padding: 0px 0px 4px 6px;
+        margin-top: 1%;
+    }
+    /*Color*/
+    .social-media div.icon{
+        border-radius: 50%;
+        color: #686464;
+        /* border: 1px solid gray; */
+        font-size: 1.5em;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    /*Posición de los iconos*/
+    .social-media{
+        display: inline-flex;
+        justify-content: flex-end;
+        text-align: right;
+    }
+    .icons{
+      display: flex;
+      align-items:self-end;
+    }
+
+    /*Posición de los iconos(Ubicación)*/
+    .icons>.icon-pair {
+        margin-left: 48%;
+        margin-top: -49%;
+    }
+    /*Propiedades del texto
+    Todos los derechos reservados excepto donde se indica
+    */
+    .derechosDeAutor p{
+      color: var(--ColorTexto);
+      font-size: small;
+      margin-bottom: 0rem;
+    }
+
+    div.legal ul li{
+      padding: 3px 0px 0px 0px;
+      font-size: small;
+      display:inline;
+      color: var(--ColorTexto) !important;
+      font-weight: bold !important;
+    }
+    /*Propiedades del texto legal*/
+    div.legal ul li a:not(.btn){
+        padding-left:0px;
+        padding-right:3px;
+        color: var(--ColorTexto)!important;
+        font-weight: bold !important;
+    }
+    /*Propiedades de la p del texto legal*/
+    div.legal p{
+        padding: 0%;
+        margin-block: 0;
+        font-size: small;
+        color: var(--ColorTexto);
+        font-weight: bold !important;
+    }
+     
+    @media screen and (max-width: 425px){
+      .Logo-empresa{
+        width: 38%;
+        padding: 0px 0px 2px 0px;
+        margin-top: 1%;
+      }
+      .icons>.icon-pair {
+        margin-left: none;
+        margin-top: none;
+      }
+      .Powered {
+        display: flex;
+        gap: 5px;
+      }
+      .derechosDeAutor p {
+        font-size:x-small;
+      }
+      .btn-img1 {
+        width: 91px;
+      }
+      .btn-img1 img {
+        height: 82%;
+      }
+      .btn-img2 {
+        width: 106px;
+      }
+      .btn-img2 img {
+        height: 82%;
+      }   
+      div.legal ul li a:not(.btn) {
+        font-size: x-small;
+      }
+
+    }
+    @media screen and (max-width: 375px){
+       .Logo-empresa{
+        width: 36%;
+        padding: 0px 0px 2px 0px;
+        margin-top: 1%;
+      }
+      .icons>.icon-pair {
+        margin-left: none;
+        margin-top: none;
+      } 
+      .btn-img1 {
+        width: 65px;
+      }
+      .btn-img2 {
+        width: 83px;
+      }
+      .btn-img1 img {
+        height: 60%;
+      }
+      .btn-img2 img {
+        height: 57%;
+      } 
+      .Powered {
+        display: flex;
+        gap: 0;
+      }
+      .derechosDeAutor p {
+        font-size:x-small;
+      }
+      .legal{
+        padding: 3px 0px 0px 0px;
+      }
+      div.legal ul li a:not(.btn) {
+        font-size: x-small;
+      }
+
+    } 
+/*----Fin estilos footer----------*/     
+  </style>
+      <div class="contenedor ancho">
+        <div class="contacto">
+            <ul>
+                <li>
+                    <a href="/contact" target="_blank">Contacto</a>
+                </li>
+                <li>
+                    <a href="http://se.puebla.gob.mx/" target="_blank">Acerca de</a>
+                </li>
+            </ul>
+        </div>
+        <div class="Powered">
+        <!-- <a class="btn-img1" href="https://www.plenumsoft.com.mx" target="_blank">
+          <img class="logo1" alt="organization logo" src="${static.url('CIENTT-theme/images/Powered by Plenum.png')}"> 
+        </a> -->
+        <a class="btn-img2" href=" http://open.edx.org" target="_blank">
+          <img class="logo2" src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag.png"
+            alt="Con la tecnología de Open edX">
+        </a>
+      </div>
+    </div> 
+    <div class="">
+      % if context.get('include_language_selector', footer_language_selector_is_enabled()):
+      <%include file="${static.get_template_path('widgets/footer-language-selector.html')}" />
+      % endif
+    </div>
+    <div class="contenedor ancho">
+      <div class="Logo-empresa">
+        <a target="_blank">
+          <img class="Logo-empresa" alt="organization logo" src="${static.url('PueblaSE_V2-theme/images/LOGO SE.jpg')}"> 
+        </a>
+        <a target="_blank">
+          <img class="Logo-empresa2" alt="organization logo" src="${static.url('PueblaSE_V2-theme/images/LOGO STEM.jpeg')}"> 
+        </a>
+      </div>
+      <!-- <div class="social-media">
+        <div class="icons">
+            <div class="icon-pair">
+              <a class="media-link" href="https://www.facebook.com/OITMexico" target="_blank"><span
+                  class="icon facebook-icon fa fa-facebook"></span>
+              </a>
+              <a class="media-link" href="https://twitter.com/OITMexico" target="_blank"><span
+                  class="icon twitter-icon fa fa-twitter"></span>
+              </a>
+            </div>
+        </div>
+      </div> -->
+    </div>
+    <!-- <div class="derechosDeAutor">
+      <p>${footer['copyright']} ${u" | {icp}".format(icp=getattr(settings,'ICP_LICENSE')) if getattr(settings,'ICP_LICENSE',False) else ""}</p>
+    </div> -->
+    <div class="legal">
+      <ul>
+        <li>
+          <a href="/privacy" target="_blank">Aviso de privacidad</a>
+        </li>
+        <li>
+          <a href="/honor" target="_blank">Código de Honor</a>
+        </li>
+        <!-- <li>
+          <a href="/tos" target="_blank">Términos de servicio</a>
+        </li> -->
+      </ul>
+      <p>Todos los derechos reservados.</p>
+    </div>
+  </div>
+  </footer>
+
+
+% if include_dependencies:
+  <%static:js group='base_vendor'/>
+  <%static:css group='style-vendor'/>
+  <%include file="widgets/segment-io.html" />
+  <%include file="widgets/segment-io-footer.html" />
+% endif
+% if footer_css_urls:
+  % for url in footer_css_urls:
+    <link rel="stylesheet" type="text/css" href="${url}"></link>
+  % endfor
+% endif

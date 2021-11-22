@@ -1,0 +1,88 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Honor Code")}</%block>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+<style>
+    .subtitulo{
+        color:  #a8123e !important;
+        font-weight:bold!important; 
+    }
+    .titulo{
+        color: #50a3af !important;
+	    font-weight:bold !important;
+    }
+    ul{
+        font-family: 'Kanit', sans-serif!important;
+    }
+    .font-kanit{    /* La clase es unicamente para ponerte texto KANIT a los parrafos */
+        font-family: 'Kanit', sans-serif!important; 
+        font-weight: 300;
+        
+    }
+</style>
+<main id="main" aria-label="Content" tabindex="-1" style="line-height:2; text-align: justify;">
+    <section class="container about">
+        <h1>
+            <%block name="pageheader"><span class="titulo">${page_header or _("CODIGO DE HONOR")}</span></%block>
+        </h1>
+        <p>
+            ## <%block name="pagecontent">${page_content or _("This page left intentionally blank. Feel free to add your own content.")}</%block>
+            <%block name="pagecontent">
+                <h3 class="subtitulo"> POLÍTICA DE COLABORACIÓN </h3>
+                <br>
+                <p class="font-kanit">
+                    Para hacer uso de la plataforma Habilidades STEM debe aceptar el Código de honor a continuación y las condiciones adicionales 
+                    específicas para cada curso:
+
+		        </p>
+                <br>
+                <h3 class="subtitulo">COMPROMISO CON EL CÓDIGO DE HONOR DE LA PLATAFORMA HABILIDADES STEM</h3>
+                <br>
+                <p class="font-kanit">
+                    Al matricularme en un curso de Habilidades STEM acepto que:
+		            <ul>
+                        <li>Realizaré todas las pruebas y asignaciones por mi cuenta, a menos que la colaboración en una tarea esté explícitamente permitida.</li>
+                        <li>Solo mantendré una cuenta de usuario y no permitiré que nadie más use mi nombre de usuario o contraseña.</li>
+                        <li>No participaré en ninguna actividad que mejore de manera deshonesta mis resultados, o que mejore o perjudique los resultados de otras personas.</li>
+                        <li>No publicaré respuestas a los problemas que se utilizan para evaluar el rendimiento de los estudiantes.</li>
+                    </ul>
+                </p>
+                <br>
+                <h3 class="subtitulo"> INFRACCIONES </h3>
+                <br>
+                <p class="font-kanit">
+                    Si se descubre que ha infringido las Condiciones de servicio o el Código de honor, puede estar sujeto a una o más de las siguientes acciones:
+                    <ul>
+                        <li>Recibir una calificación de cero o ningún reconocimiento por su trabajo;</li>
+                        <li>La retención o revocación de un certificado obtenido en el curso;</li>
+                        <li>La cancelación de la matrícula de un curso; o</li>
+                        <li>La rescisión de su uso del Sitio.</li>
+                    </ul>
+                    Respecto a las infracciones al Código de honor,
+                    se le notificará si se ha determinado que ha infringido este código de honor y se le informará de la acción correspondiente que se tomará como resultado de la infracción
+                </p>
+                <br>
+                <h3 class="subtitulo">MODIFICACIÓN DEL CÓDIGO DE HONOR </h3>
+                <br>
+                <p class="font-kanit">
+                    Tenga en cuenta que cada cierto tiempo revisamos y podemos efectuar cambios en este Código de honor.Cualquier cambio en
+                    este Código de honor entrará en vigencia inmediatamente después de su publicación en esta página,
+                    con una fecha de entrada en vigencia actualizada.Al acceder al Sitio después de que se han efectuado cambios,
+                    usted manifiesta su acuerdo,
+                    de forma prospectiva,
+                    con el Código de honor modificado y con cualquier cambio que contenga.Asegúrese de visitar esta página de forma
+                    periódica para asegurarse de estar familiarizado con la versión más actualizada de este Código de honor.</p>
+                <br>
+                <h3 class="subtitulo"> FECHA DE ENTRADA EN VIGENCIA: </h3>
+                <br>
+                <p class="font-kanit">22 de noviembre de 2021.</p>
+            </%block>
+        </p>
+    </section>
+</main>

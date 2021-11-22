@@ -1,0 +1,54 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Contact")}</%block>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+
+<style>
+    .texto{
+        float:left;
+        width:30%;
+        padding-right:35px;
+    }
+    .mapa{
+        float:left;
+        width:65%;
+    }
+    /* .subtitulo{
+        color:#1E2DBE;
+    } */
+    .titulo{
+        color: #50a3af !important;
+	    font-weight:bold !important;
+    }
+    a{
+        font-family: 'Kanit', sans-serif!important; 
+        font-weight: 300;
+    }
+    .font-kanit{    /* La clase es unicamente para ponerte texto KANIT a los parrafos */
+        font-family: 'Kanit', sans-serif!important; 
+        font-weight: 300;
+    }
+
+    
+</style>
+<main id="main" aria-label="Content" tabindex="-1" style="line-height:2; text-align: justify;">
+    <section class="container about">
+        <h1>
+            <%block name="pageheader"><span class="titulo">CONTACTO</span></%block>
+        </h1>
+	<div class="font-kanit">
+		Estamos para apoyarte, recuerda enviar tu mensaje con la captura de pantalla correspondiente que muestre el problema que tengas.</br>
+        Dirección de correo electrónico:
+        <a
+            style="text-decoration:underline;color: #1E2DBE !important;   font-weight:bold!important;"
+            href="mailto:economia@puebla.gob.mx"> economia@puebla.gob.mx </a>
+	
+	</div>
+    </section>
+</main>

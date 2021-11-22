@@ -1,0 +1,401 @@
+<%page expression_filter="h"/>
+<%! 
+  from django.utils.translation import ugettext as _
+  from django.core.urlresolvers import reverse    
+%>
+<%inherit file="../main.html" />
+##<%block name="pagetitle">${_("Terms of Service")}</%block>
+<%block name="pagetitle">Aviso de privacidad</%block>
+<style>
+    .subtitulo{
+        color: #a8123e !important;
+		font-weight: bold !important;
+		text-align: justify;
+    }
+    .titulo{
+        color: #50a3af !important;
+		font-weight: bold !important;
+    }
+	.negrita{
+		color: #000000;
+		font-weight: bold;
+	}
+	.flex-header{
+		display: flex;
+		justify-content:space-between;
+	}
+	ul,li,p{
+        font-family: 'Kanit', sans-serif!important;
+    }
+	.font-kanit{    /* La clase es unicamente para ponerte texto KANIT a los parrafos */
+        font-family: 'Kanit', sans-serif!important; 
+        font-weight: 300;
+    }
+	/*	padding de la pagina*/
+	.container.about, section.about.outside-app, .view-profile .profile-self .wrapper-profile-field-account-privacy .about.u-field-account_privacy, .view-profile .about.wrapper-profile-sections, .view-profile .about.badge-set-display {
+    padding: 2px 30px 27px;
+}
+	
+
+</style>
+<main id="main" aria-label="Content" tabindex="-1" style="line-height:2; text-align: justify;">
+    <section class="container about">
+        
+		<!-- <div class="flex-header">
+			<img src="https://crezee.academy/asset-v1:AceleraCenter+CIMF.01+2020+type@asset+block@logo-privacidad.png" style="width:15%">
+			<img src="https://crezee.academy/asset-v1:AceleraCenter+CIMF.01+2020+type@asset+block@imagen_aviso_privacidad.png" style="width:25%">
+		</div> -->
+		<h1>
+            ##<%block name="pageheader">${page_header or _("Terms of Service")}</%block>
+			<%block name="pageheader"><span class="titulo">AVISO DE PRIVACIDAD</span></%block>
+        </h1>
+		<div></div>
+        <p class="font-kanit">
+            ##<%block name="pagecontent">${page_content or _("This page left intentionally blank. Feel free to add your own content.")}</%block>
+			<%block name="pagecontent">
+				<h1 class="subtitulo">1. Objeto</h1>
+				<p class="font-kanit">
+					Con fundamento en las disposiciones vigentes de la Ley Federal de Protección de Datos
+					Personales en Posesión de los Particulares, publicada en el Diario Oficial de la Federación el 5
+					de julio de 2010 (en adelante, la “Ley”), mediante el presente aviso de privacidad (el “Aviso de
+					Privacidad”), informamos a la persona a quien corresponden los datos personales (en adelante,
+					el “Titular”) que cierta de la información personal que nos proporcione ya sea de manera
+					personal o bien directamente por cualquier medio electrónico, óptico, sonoro, visual o través de
+					cualquier otra tecnología o por cualquier otro medio en el curso de sus interacciones con
+					nosotros (los “Datos Personales”), puede ser recopilada y almacenada por nosotros para las
+					finalidades a las que se refiere el presente Aviso de Privacidad.
+
+				</p>
+				<br>
+				<p class="font-kanit">
+					El responsable de la protección, uso y tratamiento de sus Datos Personales es [Movimiento
+					STEM, A.C.] (en lo sucesivo, “STEM”), con domicilio en Av. Toluca 373 int. 76 colonia Olivar de
+					los Padres delegación Álvaro Obregón C.P. 01780, Ciudad de México. Para contactarnos favor de
+					marcar al teléfono (55) 7941 6757 o mandar un correo electrónico a la dirección:
+					<a class="negrita" href="mailto:comunicacion@movimientostem.org">comunicacion@movimientostem.org</a>
+				</p>
+
+				<br>
+
+				<h1 class="subtitulo">2. Obtención de Datos Personales. </h1>
+				<p class="font-kanit">
+					Para dar cumplimiento a lo dispuesto en la Ley y para las finalidades previstas en el presente
+					Aviso de Privacidad, le informamos que podemos recabar sus Datos Personales de la siguiente
+					manera:
+					<ul>
+                        <li>De forma directa cuando el Titular los proporcione a “STEM”;</li>
+                        <li>Cuando el Titular visiste la página de internet de "STEM": 
+							<a href="http://movimientostem.org/"> http://movimientostem.org/ </a>
+						</li>
+                        <li> Cuando "STEM" obtenga información a través de otros medios permitidos por la legislación 
+							 vigente y aplicable.
+						</li>
+                    </ul>
+				</p>
+				<br>
+				<p class="font-kanit">
+					Para efectos de claridad se establece que los Datos Personales que puede recabar “STEM” de
+					forma directa, son aquellos que el Titular mismo proporcione tales como nombre, número de
+					teléfono, domicilio completo, datos de pago o transferencias, registro federal de contribuyentes,
+					clave única de registro de población, número de afiliación del seguro social, cuenta bancaria,
+					número de tarjeta de crédito, dirección IP, correo electrónico y fotografías, así como los demás
+					Datos Personales que “STEM” requiera en relación con las finalidades del presente Aviso de
+					Privacidad.
+
+				</p>
+				<br>
+				<p class="font-kanit">
+					Asimismo, se establece que los Datos Personales que “STEM” obtenga por otros medios
+					permitidos por la legislación vigente aplicable o resoluciones de alguna autoridad competente
+					facultada para dichos efectos, serán de manera enunciativa más no limitativa nombre, el lugar y
+					puesto de trabajo, datos relacionados con la fuente de trabajo del Titular, entre otros.
+
+				</p>
+
+				<br>
+				
+				<h1 class="subtitulo">3. Finalidad de los Datos Personales. </h1>
+				<p class="font-kanit">
+					Los Datos Personales que se recaben se utilizarán para las siguientes finalidades:
+				</p>
+				<p>
+					<ol type="a">
+						<li> Finalidad Primaria 
+								<ol type="i">
+									<li>Clientes: “STEM” tratará los Datos Personales del Titular con la finalidad de llevar a
+										cabo las actividades y gestiones enfocadas al cumplimiento de las obligaciones
+										originadas y derivadas de cualquier relación jurídica y comercial que establezca con
+										motivo de la prestación de sus servicios; facturación; cobranza; crédito; atención a
+										clientes; servicio técnico; otorgamiento de garantías; gestión de servicios de valor
+										agregado y contenidos; administración de aplicaciones y sitios web; contacto con el
+										cliente, con la fuerza de ventas y distribuidores; para proporcionar, renovar, fidelizar,
+										activar, cambiar, devolver o cancelar los servicios que el Titular solicite y demás
+										actividades afines, así como para hacerle llegar comunicaciones en relación con la
+										finalidad del presente Aviso de Privacidad.
+									</li>
+
+									<br>
+
+									<li>Empleados: Se utilizarán para todos los fines vinculados con la selección,
+										reclutamiento, verificación de referencias, bolsa de trabajo y obligaciones derivadas
+										de la relación laboral, que en su caso se establezca.
+									</li>
+
+									<br>
+
+									<li>Cualquier persona que ingrese a las instalaciones de “STEM”: Para actividades
+										relacionadas con el control de acceso [y video vigilancia/grabación] para la
+										seguridad y resguardo de los recursos materiales y humanos dentro de las
+										instalaciones de “STEM”.
+									</li>
+								</ol>	
+						</li>
+
+						<br>
+
+						<li> Finalidades Secundarias
+							<p class="font-kanit">
+								Asimismo, “STEM” tratará Datos Personales para otras
+								finalidades como enviar notificaciones de ofertas, avisos y/o mensajes promocionales;
+								comunicaciones con fines de mercadotecnia, publicidad o telemarketing sobre productos
+								y servicios nuevos o existentes ya sean propios o de socios comerciales; [realizar
+								encuestas; estadísticas; estudios de mercado, registros sobre hábitos de consumo a
+								través de herramientas de captura automática de datos, intereses y comportamiento];
+								realizar programas de beneficios e incentivos; participar en redes sociales, chats y/o
+								foros de discusión; participar en eventos, trivias, concursos, rifas, juegos y sorteos;
+								evaluar la calidad de los servicios; y en general para cualquier actividad encaminada a
+								promover, mantener, mejorar y evaluar sus productos y servicios.</p>
+						</li>
+					</ol>
+
+					<p class="font-kanit">
+						Puede oponerse al tratamiento de sus datos para las finalidades secundarias a través de los
+						medios puestos a su disposición para el ejercicio de sus derechos de Acceso, Rectificación,
+						Cancelación y Oposición a los que se refiere el punto 7 del presente Aviso de Privacidad.
+					</p>
+				</p>
+	
+				<br>
+
+				<h1 class="subtitulo">4. Tratamiento de los Datos Personales Sensibles</h1>
+				<p class="font-kanit">
+					“STEM” no recaba datos personales sensibles, según se definen en la fracción VI del artículo 3
+					de la Ley, tales como datos de origen racial o étnico, estado de salud presente y futuro,
+					información genética, creencias religiosas, filosófica, morales, afiliación sindical, opiniones
+					políticas, preferencia sexual. Sin embargo, si por cualquier acción, hecho o circunstancia “STEM”
+					llegare a obtener datos personales de esta índole, ésta se compromete a que dichos datos
+					serán tratados bajo los estándares y medidas más estrictas de seguridad que garanticen su
+					confidencialidad.
+				</p>
+
+				<br>
+
+				<h1 class="subtitulo">5. Fotografías </h1>
+				<p class="font-kanit">
+					“STEM” podrá recabar fotografías del Titular a efecto de utilizarlas en avisos y/o mensajes
+					promocionales; comunicaciones con fines de mercadotecnia, publicidad o telemarketing sobre
+					productos y servicios nuevos o existentes ya sean propios o de socios comerciales. El Titular
+					puede oponerse al tratamiento de sus fotografías para estas finalidades a través de los medios
+					puestos a su disposición para el ejercicio de sus derechos de Acceso, Rectificación, Cancelación
+					y Oposición a los que se refiere el punto 7 del presente Aviso de Privacidad.
+
+				</p>
+
+				<br>
+				<h1 class="subtitulo">6. Limitación del Uso o Divulgación de los Datos Personales </h1>
+				<p class="font-kanit">
+					Los Datos Personales a los que se refiere este Aviso de Privacidad podrán ser transferidos a:
+
+					<ol type="a">
+						<li>
+							Sociedades relacionadas o subsidiarias de “STEM” con la finalidad de ofrecerle otros
+							productos y servicios.
+						</li>
+
+						<li>
+							Autoridades judiciales mexicanas y extranjeras, con la finalidad de dar cumplimiento a
+							notificaciones, requerimientos y oficios de carácter judicial.
+						</li>
+
+						<li>
+							Autoridades administrativas (incluyendo el Instituto Mexicano del Seguro Social), con la
+							finalidad de dar cumplimiento a obligaciones contenidas en la legislación vigente.
+						</li>
+					</ol>
+
+					<p class="font-kanit">
+						Asimismo, “STEM” no comunicará, compartirá ni de ninguna forma transferirá los Datos
+						Personales recabados, ya sea dentro o fuera del territorio nacional, a terceras personas distintas
+						de las señaladas anteriormente y a sus empresas afiliadas, subsidiarias, controladoras o
+						controladas, partes relacionadas o con aquellas con las que tenga algún acuerdo de negocios o
+						comercial o de cualquier otra índole. En caso de que realicemos alguna transferencia adicional
+						que requiera su consentimiento expreso, se recabará el mismo previamente.
+					</p>
+				</p>
+
+				<br>
+
+				<h1 class="subtitulo">7. Derechos de Acceso, Rectificación, Cancelación y Oposición relativos a los Datos Personales </h1>
+				<p class="font-kanit">
+					El Titular tendrá el derecho de acceder a los Datos Personales que “STEM” hubiera recabado de
+					él en días y horas laborales, previa solicitud que realice directamente a STEM, a través del
+					siguiente correo electrónico <a href="mailto:comunicacion@movimientostem.org."> comunicacion@movimientostem.org </a> .
+					Asimismo, tendrá el derecho
+					de rectificar los Datos Personales en caso de que éstos estén incompletos o sean inexactos, así
+					como cancelarlos de los registro de STEM en cualquier momento, excepto en casos establecidos
+					en el artículo 26 de la Ley. Finalmente, podrá oponerse al tratamiento de sus Datos Personales
+					para fines específicos.
+
+					<p class="font-kanit">
+						Para poder llevar a cabo el ejercicio de alguno de los derechos mencionados, el Titular deberá
+						presentar una solicitud por escrito a la dirección de correo electrónico mencionada con atención
+						a Giovanna Guerrero, que contenga la siguiente información:
+					</p>
+					<br>
+					<ol type="i">
+						<li>
+							El nombre del Titular y domicilio u otro medio para comunicarle la respuesta de la
+							solicitud,
+						</li>
+
+						<li>
+							Los documentos suficientes y necesarios que acrediten la identidad del Titular de los
+							Datos Personales o en su caso de su representante legal con las facultades suficientes y
+							necesarias para los efectos en cuestión,
+						</li>
+
+						<li>
+							La descripción clara y precisa de los Datos Personales respecto de los cuales se quiere
+							ejercer alguno de los derechos de acceso, rectificación, cancelación y/u oposición, y
+						</li>
+
+						<li>
+							Cualquier otro documento o elemento que facilite la localización de los Datos Personales
+							sujetos al ejercicio alguno de los derechos antes mencionados.
+						</li>
+						
+					</ol>
+
+					<p class="font-kanit">
+						En caso de que se trate de solicitudes relativas al ejercicio de los derechos mencionados,
+						además de incluir la información descrita anteriormente, el interesado deberá describir los
+						Datos Personales que se van a rectificar o cancelar e incluir la información y documentos que
+						sustenten su petición.
+					</p>
+					<br>
+					<p class="font-kanit">
+						“STEM” deberá responder a la solicitud descrita en un plazo que no podrá exceder de 20 días
+						naturales contados a partir de que se reciba dicha solicitud. En el supuesto que la solicitud del
+						Titular cumpla con todos los requisitos y, por ende resultare procedente, “STEM” contará con un
+						plazo que no excederá de 15 días naturales contados a partir de la fecha de comunicación de la
+						respuesta señalada con anterioridad para hacer efectiva la solicitud.
+					</p>
+
+				</p>
+				
+				<br>
+				<h1 class="subtitulo">8. Revocación de la Autorización para el tratamiento de Datos Personales </h1>
+				<p class="font-kanit">
+					En términos de lo dispuesto por el artículo 8 de la Ley, el Titular podrá revocar en todo
+					momento la autorización que otorga a “STEM” para el tratamiento de sus Datos Personales,
+					mediante el envío de un correo electrónico a la dirección de correo electrónico señalada en el
+					punto anterior que contenga la siguiente información:
+
+					<ol type="i">
+						<li>
+							El nombre y domicilio para comunicarle la respuesta de la solicitud,
+						</li>
+
+						<li>
+							Los documentos suficientes y necesarios que acrediten la identidad del Titular de los
+							Datos Personales o en su caso de su representante legal con las facultades suficientes y
+							necesarias para los efectos en cuestión,
+						</li>
+
+						<li>
+							La descripción clara y precisa de los Datos Personales respecto de los cuales se requiere
+							la cancelación, y
+						</li>
+
+						<li>
+							Cualquier otro documento o elemento que facilite la localización de los datos personales
+							sujetos a la cancelación antes mencionada.
+						</li>
+					</ol>
+
+					<p class="font-kanit">
+						“STEM” deberá responder a la solicitud descrita en los mismos plazos señaladas en el punto (7)
+						anterior.
+					</p>
+				</p>
+
+				<br>
+
+				<h1 class="subtitulo">9. Modificaciones al Aviso de Privacidad. </h1>
+				<p class="font-kanit">
+					“STEM” se reserva el derecho de realizar cualquier tipo de modificación o actualización al
+					presente Aviso de Privacidad, con la finalidad de dar cabal cumplimiento a las nuevas
+					disposiciones legales, a nuevas políticas internas o a requerimientos de cualquier autoridad
+					competente. Estas modificaciones y/o actualizaciones se darán a conocer inmediatamente
+					después de su entrada en cualquiera de las siguientes maneras: un mensaje enviado a su
+					correo electrónico, un comunicado a conocer a través del Sitio Web o bien a través de una
+					publicación de la versión actualizada del Aviso de Privacidad en esta sección.
+				</p>
+				<p class="font-kanit">
+					En un plazo de 5 (cinco) días naturales posterior a la fecha de inicio de la vigencia del presente
+					Aviso de Privacidad o, en su caso, de cualquiera de sus actualizaciones subsecuentes usted
+					deberá manifestar su oposición al tratamiento de sus Datos Personales por parte de “STEM”
+					mediante el envío de un correo electrónico a la dirección de correo electrónico mencionada
+					anteriormente en el presente Aviso de Privacidad. Una vez transcurrido el plazo antes
+					mencionado, se entenderá su aceptación tácita a los lineamientos y disposiciones establecidos
+					en el presente Aviso de Privacidad.
+				</p>
+
+				<br>
+
+				<h1 class="subtitulo">10. Procedimiento de Protección de Derechos. </h1>
+				<p class="font-kanit">
+					Si el Titular considera que el derecho a la protección de sus Datos Personales ha sido violado
+					por algún miembro de “STEM” o que se incumple con alguno de los requisitos establecidos en la
+					Ley, hacemos de su conocimiento que podrá iniciar un Procedimiento de Protección de Derechos
+					ante el Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos
+					Personales (INAI) dentro de los 15 (quince) días hábiles siguientes a la fecha en que reciba una
+					respuesta de “STEM” respecto de su solicitud, o a partir de que concluya el plazo de 20 (veinte)
+					días hábiles contados a partir de la fecha de recepción de su solicitud de ejercicio de derechos y
+					no hubiese recibido respuesta alguna por parte de nosotros.
+				</p>
+
+				<br>
+
+				<h1 class="subtitulo">11. Uso de Cookies. </h1>
+				<p class="font-kanit">
+					“STEM” usa cookies para ayudar (anónimamente) a reconocer al Titular como un visitante
+					frecuente y para registrar patrones de tráfico en nuestro Sitio Web. “STEM” utiliza dicha
+					información para hacer que el Sitio Web sea más amigable con los Usuarios. “STEM” puede
+					obtener la dirección IP de sus usuarios, utilizando esta información para monitorear y prevenir
+					fraudes, diagnosticar problemas y estimar (anónimamente) información demográfica.
+				</p>
+				<br>
+				<p class="font-kanit">
+					Los usuarios podrán cambiar sus opciones a través de sus equipos de cómputo y/o navegador
+					de Internet para dejar de aceptar cookies o bien confirmar si las permiten o rechazan. Sin
+					embargo, si desactiva las cookies puede ocasionar, no tener acceso a algunas de las funciones
+					personalizadas de nuestro Sitio Web.
+				</p>
+				
+				<br>
+
+				<h1 class="subtitulo">12. Consentimiento del Titular. </h1>
+				<p class="font-kanit">
+					Para efectos de lo dispuesto en la Ley y demás legislación aplicable, el Titular manifiesta (i) que
+					el presente Aviso de Privacidad le ha sido dado a conocer por “STEM”, (ii) haber leído y
+					acordado los términos expuestos en este Aviso de Privacidad, y (iii) que otorga su
+					consentimiento respecto del tratamiento de sus datos personales.
+
+				</p>
+				
+				</p>
+			</%block>
+		</p>
+    </section>
+</main>

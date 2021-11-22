@@ -1,0 +1,124 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+##<%block name="pagetitle">${_("Terms of Service")}</%block>
+<%block name="pagetitle">Políticas de privacidad</%block>
+<style>
+    .subtitulo{
+        color: #ffa100;
+	font-weight: bold;
+    }
+    .titulo{
+        color: #ffa100 !important;
+	font-weight: bold;
+    }
+	.negrita{
+		color: #000000;
+	}
+</style>
+<main id="main" aria-label="Content" tabindex="-1" style="line-height:2; text-align: justify;">
+    <section class="container about">
+        <h1>
+            ##<%block name="pageheader">${page_header or _("Terms of Service")}</%block>
+			<%block name="pageheader"><span class="titulo">Políticas de privacidad</span></%block>
+        </h1>
+        <p>
+            ##<%block name="pagecontent">${page_content or _("This page left intentionally blank. Feel free to add your own content.")}</%block>
+			<%block name="pagecontent">
+				<p>
+					El Aviso de Privacidad se limita únicamente a la plataforma UPY Digital University y toda la información publicada bajo el nombre o dominio de: <a href="https://upy.crezee.academy/" target="_blank">https://upy.crezee.academy/</a>, responsable de sus datos personales. 
+				</p>
+				<br>
+				<h3 class="subtitulo">¿Para qué fines recabamos y utilizamos sus datos personales?</h3>
+				<p>
+					Sus datos personales serán utilizados para las siguientes finalidades:
+					<ul>
+						<li>Generar una base de datos.</li>
+						<li>Educativas.</li>
+						<li>Proveer el servicio requerido por usted.</li>
+						<li>Informar sobre los cambios o nuevos servicios.</li>
+						<li>Dar cumplimiento a obligaciones contraídas con nuestros usuarios.</li>
+						<li>Evaluar la calidad del servicio.</li>
+						<li>Realizar diversos estudios en diferentes materias.</li>
+					</ul>
+				</p>
+				<br>
+				<h3 class="subtitulo">¿Qué datos personales obtenemos?</h3>
+				<p>
+					Para las finalidades señaladas en el presente <b>Aviso de Privacidad</b>, recabamos los siguientes datos:
+					<ul>
+						<li>Nombre Completo.</li>
+						<li>Correo electrónico.</li>
+						<li>Escolaridad.</li>
+						<li>Sexo</li>
+						<li>Fecha de Nacimiento.</li>
+					</ul>
+				</p>
+				<br>
+				<h3 class="subtitulo">¿Cómo puede limitar el uso o divulgación de sus datos personales?</h3>
+				<p>
+					Para dejar de recibir correos electrónicos con promocionales, debe solicitarlo a la dirección electrónica: <a href="mailto:upydigitaluniversity.soporte@gmail.com">upydigitaluniversity.soporte@gmail.com</a>
+				</p>
+				<br>
+				<h3 class="subtitulo">¿Cómo acceder o rectificar sus datos personales o cancelar u oponerse a su uso?</h3>
+				<p>
+					Usted tiene derecho de acceder a sus datos personales que poseemos y a los detalles del tratamiento de los mismos, así como a rectificarlos en caso de ser inexactos o incompletos; cancelarlos cuando considere que no se requieren para alguna de las finalidades señaladas en el presente Aviso de Privacidad, estén siendo utilizados para finalidades no consentidas o haya finalizado la relación contractual o de servicio, o bien, oponerse al tratamiento de los mismos para fines específicos.
+				</p>
+                                <p>
+					El mecanismo implementado para el ejercicio de dichos derechos es a través de la presentación de una solicitud respectiva en: <a href="mailto:upydigitaluniversity.soporte@gmail.com">upydigitaluniversity.soporte@gmail.com</a>
+                                </p>
+                                <p>
+					El plazo máximo para atender su solicitud será de 20 días hábiles.
+                                </p>
+				<br>
+				<h3 class="subtitulo">¿Cómo puede revocar su consentimiento para el tratamiento de sus datos?</h3>
+				<p>
+					En todo momento, usted podrá revocar el consentimiento que nos ha otorgado para el tratamiento de sus datos personales, a fin de que dejemos de hacer uso de los mismos. Para ello, es necesario que presente su petición en <a href="mailto:upydigitaluniversity.soporte@gmail.com">upydigitaluniversity.soporte@gmail.com</a>. En un plazo máximo de 20 días hábiles atenderemos su petición y le informaremos sobre la procedencia de la misma a través de su último correo electrónico.
+				</p>
+				<br>
+				<h3 class="subtitulo">Sus datos no podrán ser compartidos con otros a excepción de otorgar consentimiento expreso. </h3>
+				<p>
+					Sus datos personales serán protegidos de conformidad con el artículo 21 de la Ley Federal de Transparencia y Acceso a la Información Pública Gubernamental. Salvo consentimiento expreso que usted otorgue en los casos siguientes:
+				</p>
+				<p>
+					Los datos personales pueden ser transferidos y tratados por diversas instituciones educativas conforme a los términos y condiciones del presente Aviso de Privacidad proporcionando información relativa a los cursos; y por razones estadísticas.
+				</p>
+				<p>
+					Si otorga el consentimiento expreso, dicha autorización deberá ser enviada mediante solicitud por escrito redactada en español incluyendo su nombre completo, domicilio y copia simple de la identificación oficial, enviada al correo electrónico upydigitaluniversity.soporte@gmail.com
+				</p>
+				<p>
+					Nos comprometemos a no transferir su información personal a terceros sin su consentimiento.
+				</p>
+				<br>
+				<h3 class="subtitulo">Modificaciones al aviso de privacidad</h3>
+				<p>
+					Nos reservamos el derecho de efectuar en cualquier momento modificaciones o actualizaciones al presente Aviso de Privacidad, para la atención de novedades legislativas, políticas internas o nuevos requerimientos para la prestación u ofrecimiento de nuestros servicios. Estas modificaciones estarán disponibles al público a través de los siguientes medios: en nuestro sitio de Internet en la sección Aviso de Privacidad; o se las haremos llegar al último correo electrónico proporcionado.
+				</p>
+				<br>
+				<h3 class="subtitulo">Uso de cookies y web beacons</h3>
+				<p>
+					Las cookies son archivos de texto que son descargados automáticamente y almacenados en el disco duro del equipo de cómputo del usuario al navegar en una página de Internet específica, que permiten recordar al servidor de Internet algunos datos sobre este usuario, entre ellos, sus preferencias para la visualización de las páginas en ese servidor, nombre y contraseña.
+				</p>
+				<p>
+					Por su parte, las web beacons son imágenes insertadas en una página de Internet o correo electrónico, que puede ser utilizado para monitorear el comportamiento de un visitante, como almacenar información sobre la dirección IP del usuario, duración del tiempo de interacción en dicha página y el tipo de navegador utilizado, entre otros.
+				</p>
+                                <p>
+					Le informamos que utilizamos cookies y web beacons con fines estadísticos para obtener información en relación a:
+					<ul>
+						<li>Su tipo de navegador y sistema operativo.</li>
+                                                <li>Las páginas de Internet que visita.</li>
+                                                <li>Los vínculos que sigue.</li>
+                                                <li>La dirección IP.</li>
+                                                <li>El sitio que visitó antes de entrar al nuestro sitio.</li>
+					</ul>
+                                </p>
+				<br>
+				<h3 class="subtitulo">¿Ante quién puede presentar sus quejas y denuncias por el tratamiento indebido de sus datos personales?</h3>
+				<p>
+					Si usted considera que su derecho de protección de datos personales ha sido lesionado por nuestras actuaciones o respuestas, presume que en el tratamiento de sus datos personales existe alguna violación a las disposiciones previstas en la Ley Federal de Transparencia y Acceso a la Información Pública Gubernamental, podrá interponer la queja o denuncia correspondiente ante el INAI, para mayor información visite <a href="www.inai.org.mx" target="_blank">www.inai.org.mx</a>	
+				</p>
+			</%block>
+		</p>
+    </section>
+</main>

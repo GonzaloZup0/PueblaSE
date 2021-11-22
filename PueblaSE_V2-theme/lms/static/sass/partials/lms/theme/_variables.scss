@@ -1,0 +1,18 @@
+// Sample dark theme to demonstrate SASS overrides
+
+// Theme colors
+//
+// Note: define colors needed by your theme first
+
+// Make the theme white on black
+
+$gray: #A7A8A9;
+
+// Make red the primary color
+$primary: $gray;
+
+// Theme fonts
+//$font-family-sans-serif: "Gotham-Black";
+
+// Initialize the Open edX Bootstrap theme
+@import 'edx-bootstrap/sass/open-edx/theme';

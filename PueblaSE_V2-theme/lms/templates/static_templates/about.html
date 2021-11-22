@@ -1,0 +1,59 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<style>
+    .subtitulo{
+        color: #520097;
+    }
+    .titulo{
+        color: #339966 !important;
+	    font-weight:bold;
+    }
+    ul,li,p{
+        font-family: 'Kanit', sans-serif!important;
+    }
+	.font-kanit, font-kanit2{    /* La clase es unicamente para ponerte texto KANIT a los parrafos */
+        font-family: 'Kanit', sans-serif!important; 
+        font-weight: 300;
+    }
+    .font-kanit2{    /* La clase es unicamente para ponerte texto KANIT a los parrafos */
+        text-align: center;
+    }
+</style>
+<main id="main" aria-label="Content" tabindex="-1" style="line-height:2; text-align: justify;">
+    <section class="container about">
+        <h1>
+            <%block name="pageheader"><span class="titulo">${page_header or _("SOMOS")}</span></%block>
+        </h1>
+	<br>
+        <p>
+            ## <%block name="pagecontent">${page_content or _("This page left intentionally blank. Feel free to add your own content.")}</%block>
+            <%block name="pagecontent">
+            
+            <p class="font-kanit">
+            “CIENTT - Ciencia y Tecnología para Todos” es una plataforma de formación continua que tiene como objetivo el capacitar,
+            enseñar y transmitir valor a través del conocimiento.
+            </p>
+            <p class="font-kanit">
+            Creemos en que una sociedad del conocimiento, nos llevará a reconocer en la innovación y en las tecnologías de la
+            información las herramientas que como humanidad necesitamos para construir nuestro futuro.
+            </p>
+            <p class="font-kanit">
+            CIENTT nace en un entorno de Ciencia, Innovación y Tecnología en Yucatán y se desarrolla a partir de la vinculación
+            interinstitucional con centros de investigación e instituciones de educación superior locales, nacionales e
+            internacionales.
+            </p>
+            <p class="font-kanit">
+            Las ofertas formativas que aquí se encuentran, buscan generar conocimiento sobre temas diversos, en beneficio de la
+            sociedad y del crecimiento personal y profesional.
+            </p>
+            <p class="font-kanit2">
+            CIENTT – Ciencia y Tecnología para ti, para todos
+            </p>
+	    </%block>
+	
+    </section>
+</main>

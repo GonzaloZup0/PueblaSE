@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+/*Boton de login*/
+.global-header .nav-links .secondary a.sign-in-btn, .global-header .nav-links .secondary .nav-item a.shopping-cart {
+        background-color: #1E2DBE !important
+}
+/*Boton de registro (Aqui no es necesario)*/
+.global-header .nav-links .secondary a.register-btn {
+        background: #10163D !important;
+        color: white
+}
+/*Enlaces*/
+a:not(.btn), a:visited:not(.btn) {
+        color: black !important
+}
+/*Titulo en contenedor de curso*/
+.courses-container .courses .course .course-info .course-title {
+        color: #646565!important;
+}
+/*?*/
+.login-button {
+        background: #54A3DA!important;
+        box-shadow: none
+}
+/*Banner en cada elemento de curso*/
+.courses-container .courses .course .course-image .cover-image .learn-more {
+    border-color: #FA3C4B !important;
+    background: #FA3C4B !important;
+}
+/*.content-wrapper .course-tabs .nav-item.active .nav-link, .content-wrapper .course-tabs .nav-link {
+    color: #54A3DA !important;
+}
+.wrapper-course-material .course-tabs .tab a, .wrapper-course-material .course-tabs .tab a:visited {
+    color: #54A3DA !important;
+    }*/
+	
+/*Borde de color en contenedor de curso*/
+.courses-container .courses .course {
+    border-bottom: 3px solid #FA3C4B!important;
+}
+/*Footer*/
+.colophon{
+	width:100%!important;
+}
+.col{
+	width:50%
+}
+.col-8{
+	width:60%
+}
+.col-4{
+	width:40%
+}
+
+.row{
+    display:flex;
+}
+.icons{
+    display:flex;
+    align-items:flex-end;
+}
+.icons>.icon-pair{
+    margin-left:60%;
+
+}
+.icons>.icon-pair>*{
+    margin: 0 10px;
+    
+}
+body,h1,h2,h3,h4,h5,h6,p,div,button,a{
+    font-family: "Noto Sans","Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+}
+/*Cambiar fuentes*/
+/*font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/g
